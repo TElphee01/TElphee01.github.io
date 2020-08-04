@@ -69,19 +69,29 @@ https://userbase.com/docs/quickstart/
 <!--Create an account -->
 <!-- Auth View -->
   <div id="auth-view">
+      <div>
+        <h1>Login</h1>
+        <form id="login-form">
+              <input id="login-username" type="text" required placeholder="Username">
+              <input id="login-password" type="password" required placeholder="Password">
+              <input type="submit" value="Sign in">
+        </form>
+        <div id="login-error"></div>
+      </div>
+
+    <div>
     <h1>Create an account</h1>
-    <form id="signup-form">
-      <input id="signup-username" type="text" required placeholder="Username">
-      <input id="signup-password" type="password" required placeholder="Password">
-      <input type="submit" value="Create an account">
-    </form>
+        <form id="signup-form">
+            <input id="signup-username" type="text" required placeholder="Username">
+            <input id="signup-password" type="password" required placeholder="Password">
+            <input type="submit" value="Create an account">
+        </form>
     <div id="signup-error"></div>
-  </div>
+    </div>
 
-  <!-- application code -->
-  <script type="text/javascript"></script>
-
-</div>
+    <!-- application code -->
+    <script type="text/javascript"></script>
+    </div></div>
 </section>
     <!-- Footer -->
     <footer class="gold-bg">

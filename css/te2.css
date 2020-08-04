@@ -5,65 +5,116 @@ Developer assumes no responsibility for use of this website or illicit use of th
 If you use this code please shoot me an email - telpheemail@aol.com. Cheers!
 
 
- Below line is write to use Google font online */
-@import "http://fonts.googleapis.com/css?family=Ubuntu";
-div#main{
-width:830px;
-height:650px;
-margin:0 auto;
-font-family:'Ubuntu',sans-serif
+@import "http://fonts.googleapis.com/css?family=Raleway";
+/*----------------------------------------------
+CSS settings for HTML div Exact Center
+------------------------------------------------*/
+#abc {
+width:100%;
+height:100%;
+opacity:.95;
+top:0;
+left:0;
+display:none;
+position:fixed;
+background-color:#313131;
+overflow:auto
 }
-div#form_sample{
+img#close {
+position:absolute;
+right:-14px;
+top:-14px;
+cursor:pointer
+}
+div#popupContact {
+position:absolute;
+left:50%;
+top:17%;
+margin-left:-202px;
+font-family:'Raleway',sans-serif
+}
+form {
+max-width:300px;
+min-width:250px;
+padding:10px 50px;
+border:2px solid gray;
+border-radius:10px;
+font-family:raleway;
+background-color:#fff
+}
+p {
+margin-top:30px
+}
+h2 {
+background-color:#FEFFED;
+padding:20px 35px;
+margin:-10px -50px;
 text-align:center;
+border-radius:10px 10px 0 0
+}
+hr {
+margin:10px -50px;
+border:0;
+border-top:1px solid #ccc
+}
+input[type=text] {
+width:82%;
+padding:10px;
+margin-top:30px;
 border:1px solid #ccc;
-width:300px;
-padding:0 50px 15px;
-margin-top:20px;
-box-shadow:0 0 15px;
-border-radius:6px;
-float:left
+padding-left:40px;
+font-size:16px;
+font-family:raleway
 }
-#main h1{
-margin-top:40px
+#name {
+background-image:url(../images/name.jpg);
+background-repeat:no-repeat;
+background-position:5px 7px
 }
-hr{
-margin-top:-5px
+#email {
+background-image:url(../images/email.png);
+background-repeat:no-repeat;
+background-position:5px 7px
 }
-label{
-float:left;
-font-size:16px
-}
-input[type="text"]{
-width:100%;
-margin-top:10px;
-height:35px;
-margin-bottom:25px;
+textarea {
+background-image:url(../images/msg.png);
+background-repeat:no-repeat;
+background-position:5px 7px;
+width:82%;
+height:95px;
 padding:10px;
-border:3px solid #2BC1F2
+resize:none;
+margin-top:30px;
+border:1px solid #ccc;
+padding-left:40px;
+font-size:16px;
+font-family:raleway;
+margin-bottom:30px
 }
-textarea{
+#submit {
+text-decoration:none;
 width:100%;
-border:3px solid #2BC1F2;
-padding:10px;
-margin-bottom:25px;
-margin-top:10px;
-height:100px;
-resize:none
-}
-input[type="submit"]{
-width:100%;
-padding:10px 45px;
-background-color:#2BC1F2;
-border:none;
+text-align:center;
+display:block;
+background-color:#FFBC00;
 color:#fff;
-font-size:18px;
-font-weight:700;
+border:1px solid #FFCB00;
+padding:10px 0;
+font-size:20px;
 cursor:pointer;
-font-family:'Ubuntu',sans-serif
+border-radius:5px
 }
-/* -------------------------------------
-CSS for Sidebar (optional)
----------------------------------------- */
-div#fugo{
-float:right
+span {
+color:red;
+font-weight:700
+}
+button {
+width:10%;
+height:45px;
+border-radius:3px;
+background-color:#cd853f;
+color:#fff;
+font-family:'Raleway',sans-serif;
+font-size:18px;
+cursor:pointer
 }

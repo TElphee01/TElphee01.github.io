@@ -150,6 +150,11 @@ https://userbase.com/docs/quickstart/
 
       userbase.openDatabase({ databaseName: 'todos', changeHandler })
         .catch((e) => document.getElementById('db-error').innerText = e)
+
+        //sign out of To-Do view
+    userbase.signOut().then(() => {
+      // user logged out
+    }).catch((e) => console.error(e))
     }
 
     function showAuth() {

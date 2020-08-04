@@ -20,22 +20,9 @@ If you use this code please shoot me an email - telpheemail@aol.com. Cheers!
     <link href="../css/te.css" rel="stylesheet">
 
     <!-- Form scripts -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-           emailjs.init('YOUR_USER_ID');
-        })();
-    </script>
-    <script type="text/javascript">
-        window.onload = function() {
-            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                event.preventDefault();
-                // generate the contact number value
-                this.contact_number.value = Math.random() * 100000 | 0;
-                emailjs.sendForm('contact_service', 'contact_form', this);
-            });
-        }
-    </script>
+    <link href="css/te2.css" rel="stylesheet">
+    <script src="js/form.js"></script>
+
     </head>
 
   <body id="page-top">
@@ -71,16 +58,28 @@ If you use this code please shoot me an email - telpheemail@aol.com. Cheers!
             </li>
           </ul>
         </div></div></nav><!-- end Navigation bar components -->
-    <header>
-
-        <div id="main">
-            <h1>Contact Form using JavaScript</h1>
-        <div id="form_sample"></div>
-            <!-- Include JS file here -->
-            <script src="/js/form.js"></script>
-        </div>
-    </header>
-
+      <body id="body" style="overflow:hidden;">
+<div id="abc">
+<!-- Popup Div Starts Here -->
+<div id="popupContact">
+<!-- Contact Us Form -->
+<form action="#" id="form" method="post" name="form">
+<img id="close" src="images/3.png" onclick ="div_hide()">
+<h2>Contact Us</h2>
+<hr>
+<input id="name" name="name" placeholder="Name" type="text">
+<input id="email" name="email" placeholder="Email" type="text">
+<textarea id="msg" name="message" placeholder="Message"></textarea>
+<a href="javascript:%20check_empty()" id="submit">Send</a>
+</form>
+</div>
+<!-- Popup Div Ends Here -->
+</div>
+<!-- Display Popup Button -->
+<h1>Click Button To Popup Form Using Javascript</h1>
+<button id="popup" onclick="div_show()">Popup</button>
+</body>
+<!-- Body Ends Here -->
     <section id="section1">
         <!-- Footer -->
     <footer class="gold-bg">

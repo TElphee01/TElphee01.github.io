@@ -88,8 +88,6 @@ https://userbase.com/docs/quickstart/
   <!-- To-dos View -->
   <div id="todo-view">
     <div id="username"></div>
-    <input type="button" value="Logout" id="logout-button">
-    <div id="logout-error"></div>
 
     <h1>To-Do List</h1>
     <div id="todos"></div>
@@ -100,8 +98,13 @@ https://userbase.com/docs/quickstart/
       <input id="add-todo" type="text" required placeholder="To-Do">
       <input type="submit" value="Add">
     </form>
-    <div id="add-todo-error"></div>
-  </div>
+
+      <div id="add-todo-error"></div>
+
+    <input type="button" value="Logout" id="logout-button">
+    <div id="logout-error"></div>
+
+      </div>
 
   <!-- application code -->
   <script type="text/javascript">
@@ -150,9 +153,10 @@ https://userbase.com/docs/quickstart/
 
       userbase.openDatabase({ databaseName: 'todos', changeHandler })
         .catch((e) => document.getElementById('db-error').innerText = e)
+    }
 
-        //sign out of To-Do view
-    userbase.signOut().then(() => {
+    function signout(){
+        userbase.signOut().then(() => {
       // user logged out
     }).catch((e) => console.error(e))
     }

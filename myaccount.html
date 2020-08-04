@@ -81,11 +81,12 @@ https://userbase.com/docs/quickstart/
     const username = document.getElementById('login-username').value
     const password = document.getElementById('login-password').value
 
-    userbase.signIn({ username, password, rememberMe: 'local' })    .then((user) => showTodos(user.username))
-    .catch((e) => document.getElementById('login-error').innerHTML = e)
+    userbase.signIn({ username, password, rememberMe: 'none' })
+      .then((user) => alert('You signed in!'))
+      .catch((e) => document.getElementById('login-error').innerHTML = e)
   }
 
-    function handleSignUp(e) {
+      function handleSignUp(e) {
     e.preventDefault()
 
     const username = document.getElementById('signup-username').value
@@ -94,7 +95,10 @@ https://userbase.com/docs/quickstart/
     userbase.signUp({ username, password, rememberMe: 'none' })
       .then((user) => alert('You signed up!'))
       .catch((e) => document.getElementById('signup-error').innerHTML = e)
-    }
+  }
+
+  document.getElementById('login-form').addEventListener('submit', handleLogin)
+  document.getElementById('signup-form').addEventListener('submit', handleSignUp)
 
     function handleLogout() {
         userbase.signOut()

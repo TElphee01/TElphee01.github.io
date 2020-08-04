@@ -1,14 +1,22 @@
 /*
-Client name: Carey Cole - CIS 366 - Lab 4_Page 1.HTML
-Programmer name: Tanner Elphee
-June 26, 2020
-My submission of this program indicated that I have neither received nor given substantial assistance in this assignment as per the JMU Honor Code. 
+<!-- Primary CSS - TElphee.io
+This code belongs to TElphee.io set of html webpages.
+Fully developed by Tanner Elphee. This website is used as my personal showcase, project sandbox, and platform template.
+Developer assumes no responsibility for use of this website or illicit use of this code.
+If you use this code please shoot me an email - telpheemail@aol.com. Cheers!
+-->
 */
 
 .bgimg{
-    background-image: url(../Images/LightBlue4.jpg);
+    background-image: url(../Images/telpheeAvatar.jpg);
 }
 
 .section4a{
     background-color: mediumpurple;
+}
+
+#profileimg{
+    width: 400px;
+    height: 400px;
+    float: left;
 }

@@ -144,10 +144,10 @@ https://userbase.com/docs/quickstart/
     const username = document.getElementById('signup-username').value
     const password = document.getElementById('signup-password').value
 
-    userbase.signUp({ username, password, rememberMe: 'local' })
-     .then((user) => showTodos(user.username))
+    userbase.signUp({ username, password, rememberMe: 'none' })
+      .then((user) => alert('You signed up!'))
       .catch((e) => document.getElementById('signup-error').innerHTML = e)
-  }
+    }
 
     function handleLogout() {
         userbase.signOut()

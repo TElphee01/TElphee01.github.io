@@ -241,6 +241,7 @@ https://userbase.com/docs/quickstart/
       .catch((e) => document.getElementById('add-todo-error').innerHTML = e)
   }
 
+      document.getElementById('signup-form').addEventListener('submit', handleSignUp)
       document.getElementById('login-form').addEventListener('submit', handleLogin)
       document.getElementById('signup-form').addEventListener('submit', handleSignUp)
       document.getElementById('add-todo-form').addEventListener('submit', addTodoHandler)

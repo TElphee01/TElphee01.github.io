@@ -132,8 +132,6 @@ https://userbase.com/docs/quickstart/
       .then((user) => alert('You signed up!'))
       .catch((e) => document.getElementById('signup-error').innerHTML = e)
     }
-    .catch((e) => document.getElementById('signup-error').innerHTML = e)
-    }
 
     function handleLogout() {
         userbase.signOut()

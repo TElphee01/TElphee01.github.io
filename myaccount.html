@@ -70,7 +70,6 @@ https://userbase.com/docs/quickstart/
   <div id="auth-view">
   <!-- Auth View -->
 
-  <div>
     <h1>Login</h1>
     <form id="login-form">
           <input id="login-username" type="text" required placeholder="Username">
@@ -78,10 +77,7 @@ https://userbase.com/docs/quickstart/
           <input type="submit" value="Sign in">
     </form>
     <div id="login-error"></div>
-  </div>
-  <!--Login Form Div -->
 
-    <div>
     <h1>Create an account</h1>
         <form id="signup-form">
             <input id="signup-username" type="text" required placeholder="Username">
@@ -89,38 +85,32 @@ https://userbase.com/docs/quickstart/
             <input type="submit" value="Create an account">
         </form>
     <div id="signup-error"></div>
-    </div>
-    <!-- Create account Div-->
-
 
     </div>
     <!-- end Auth-view div-->
-</section>
 
-      <!-- To-dos View -->
-      <div id="todo-view">
+    <!-- To-dos View -->
+    <div id="todo-view">
         <div id="username"></div>
-          <!--Sign out button -->
-          <input type="button" value="Logout" id="logout-button">
-  <div id="logout-error"></div>
+        <!--Sign out button -->
+        <input type="button" value="Logout" id="logout-button">
 
-        <h1>To-Do List</h1>
+    <div id="logout-error"></div>
+    <h1>To-Do List</h1>
         <div id="todos"></div>
         <div id="db-loading">Loading to-dos...</div>
         <div id="db-error"></div>
-      </div>
-
 
       <form id="add-todo-form">
         <input id="add-todo" type="text" required placeholder="To-Do">
         <input type="submit" value="Add">
       </form>
-      <div id="add-todo-error"></div>
-
+        <div id="add-todo-error"></div>
+    </div><!-- end of to-do view Div-->
+</section>
 
     <!-- application code -->
     <script type="text/javascript">
-
 
     userbase.init({ appId: 5b5f2a64-be2a-4ce8-9db0-c8b333065e28
     })
@@ -247,8 +237,8 @@ https://userbase.com/docs/quickstart/
       document.getElementById('add-todo-form').addEventListener('submit', addTodoHandler)
       document.getElementById('logout-button').addEventListener('click', handleLogout)
 
-  document.getElementById('todo-view').style.display = 'none'
-document.getElementById('auth-view').style.display = 'none'
+      document.getElementById('todo-view').style.display = 'none'
+      document.getElementById('auth-view').style.display = 'none'
     </script>
     <!-- End application code Script-->
 

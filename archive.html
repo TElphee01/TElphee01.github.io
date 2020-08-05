@@ -65,7 +65,20 @@ https://medium.com/javascript-in-plain-english/using-javascript-to-create-trello
         </div>
 
       <div id='boardlists' class="board-lists">
-        <div id='list1' class="board-list" ondrop="dropIt(event)" ondragover="allowDrop(event)">
+
+        <div  id='list1' class="board-list"  ondrop="dropIt(event)" ondragover="allowDrop(event)">
+        <div  class="list-title">
+            Information
+        </div>
+            <div  id='card6' class="card" draggable="true" ondragstart="dragStart(event)">
+            <a target="_blank" href="https://trello.com/en-US"> Trello </a>
+            </div>
+
+            <div  id='card7' class="card" draggable="true" ondragstart="dragStart(event)">
+            <a target="_blank" href="https://github.com/"> Github </a>
+            </div>
+
+        <div id='list2' class="board-list" ondrop="dropIt(event)" ondragover="allowDrop(event)">
           <div class="list-title">
             To Do
           </div>
@@ -87,17 +100,17 @@ https://medium.com/javascript-in-plain-english/using-javascript-to-create-trello
             </div>
 
         </div>
-        <div  id='list2' class="board-list" ondrop="dropIt(event)" ondragover="allowDrop(event)">
+        <div  id='list3' class="board-list" ondrop="dropIt(event)" ondragover="allowDrop(event)">
           <div  class="list-title">
           In Progress
           </div>
 
 
         </div>
-        <div  id='list3' class="board-list"  ondrop="dropIt(event)" ondragover="allowDrop(event)">
+        <div  id='list4' class="board-list"  ondrop="dropIt(event)" ondragover="allowDrop(event)">
           <div  class="list-title">
             Done
-            </div></div></div></div><!-- end trello card divs-->
+            </div></div></div></div></div><!-- end trello card divs-->
 
      <!-- Footer -->
     <footer class="gold-bg">

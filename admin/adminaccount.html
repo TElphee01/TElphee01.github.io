@@ -29,7 +29,6 @@ https://userbase.com/docs/quickstart/
   </head>
 
   <body id="page-top">
-      <nav>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
@@ -62,7 +61,6 @@ https://userbase.com/docs/quickstart/
             </li>
           </ul>
         </div></div></nav> <!-- end Navigation bar components -->
-      </nav>
 
         <!-- Loading View -->
   <div id="loading-view">Loading...</div>
@@ -77,24 +75,29 @@ https://userbase.com/docs/quickstart/
     <div id="signup-error"></div>
     </div></header>
       <section class="section4a">
-      <h4> Please use the following credentials to access the basic MyAccount functionality
+      <h2> Please use the following credentials to access the basic MyAccount functionality
           <br>user: admin
-          <br>pass: adminadmin</h4>
-          <h5> Do Not create an account here. The UserBase trial is limited but for this sake of this project, it is enough. Unlimited UserBase functionality is VERY cheap. > $100/yr.
-          <br><h6>Plus I can always put data into an account and only give a few people the correct credentials. For example, credentials for job recruiters with a resume download link. Or credentials for team to have quick access to personal tools and links, like my WebEx personal room. </h6>
-          </h5>
+          <br>pass: adminadmin</h2>
+          <br>
+          <h3> Do Not create an account here. The UserBase trial is limited but for this sake of this project, it is enough. Unlimited UserBase functionality is VERY cheap. > $100/yr.
+          <br><h5>Plus I can always put data into an account and only give a few people the correct credentials. For example, credentials for job recruiters with a resume download link. Or credentials for team to have quick access to personal tools and links, like my WebEx personal room. </h5>
+          </h3>
     </section>
 
+    <!-- Footer -->
+    <footer class="gold-bg">
+        <p class="footer">
+            <p>Copyright © 2020 - Developed by Tanner Elphee. All rights reserved. <a href="/aboutme.html"> About Me </a></p>
+    </footer>
+      
 <!-- application code -->
   <script type="text/javascript">
     userbase.init({ appId: '5b5f2a64-be2a-4ce8-9db0-c8b333065e28' })
       .then((session) => session.user ? showTodos(session.user) : showAuth())
       .catch(() => showAuth())
       .finally(() => document.getElementById('loading-view').style.display = 'none')
-
        function handleSignUp(e) {
       e.preventDefault()
-
       const username = document.getElementById('signup-username').value
       const password = document.getElementById('signup-password').value
 
@@ -102,7 +105,6 @@ https://userbase.com/docs/quickstart/
         .then((user) => showTodos(user))
         .catch((e) => document.getElementById('signup-error').innerHTML = e)
     }
-
        function showAuth() {
       document.getElementById('todo-view').style.display = 'none'
       document.getElementById('auth-view').style.display = 'block'
@@ -113,24 +115,11 @@ https://userbase.com/docs/quickstart/
       document.getElementById('signup-password').value = ''
       document.getElementById('signup-error').innerText = ''
     }
-
           document.getElementById('signup-form').addEventListener('submit', handleSignUp)
 
           document.getElementById('auth-view').style.display = 'none'
-
   </script>
-
-
-
-    <section id="section1">
-
-
-    <!-- Footer -->
-    <footer class="gold-bg">
-        <p class="footer">
-            <p>Copyright © 2020 - Developed by Tanner Elphee. All rights reserved. <a href="/aboutme.html"> About Me </a></p>
-    </footer>
-
+      
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -138,6 +127,7 @@ https://userbase.com/docs/quickstart/
     <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
     <!-- Custom JavaScript for this theme -->
     <script src="js/scrolling-nav.js"></script>
-    </section>
+
+      
   </body>
 </html>

@@ -1,0 +1,254 @@
+<!-- USER ACCOUNT
+This code belongs to TElphee.io set of Webdevelopment webpages
+TElphee.io has been fully developed and designed by Tanner Elphee. Consider TElphee.io Tanner Elphee's personal showcase, project sandbox, and platform template.
+DISCLAIMER: Developer assumes no responsibility. If you use this code please shoot me an email - telphee@gmail.com.
+
+This tool has been setup using FREE opensource tool UserBase. Using a new email address gives you lifetime access to maintain account services for ONE api key found in the associated account.
+User: telpheemail@aol.com
+
+Reference links:
+https://userbase.com/
+https://userbase.com/docs/quickstart/
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scae=1, shrink-to-fit=no">
+        <meta name="description" content="TannerElphee.io">
+        <meta name="author" content="TannerElphee.io telphee@gmail.com">
+        <title>TannerElphee.io</title>
+        <!-- Bootstrap core CSS -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <!-- Custom styles for this template -->
+        <link href="css/scrolling-nav.css" rel="stylesheet">
+        <link href="/css/te.css" rel="stylesheet">
+        <link href="/css/te2.css" rel="stylesheet">
+
+        <!-- Userbase opensource user plug-in javascript -->
+        <script type="text/javascript" src="https://sdk.userbase.com/2/userbase.js"></script>
+  </head>
+
+  <body id="page-top">
+      <nav>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">Tanner Elphee.io</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="TElphee.html">Home</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/aboutme.html">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/abouttelpheeio.html">About TElphee.io</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/showcase.html">Showcase</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/archive.html">Archive</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="/myaccount.html">My Account</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" target="_blank" href="https://forms.gle/gNd1wz6S8BjiX3tR6">Contact</a>
+            </li>
+          </ul>
+        </div></div></nav> <!-- end Navigation bar components -->
+      </nav>
+
+
+   <section id="section2">
+
+<!-- Loading View -->
+  <div id="loading-view">Loading...</div>
+
+  <!-- Auth View -->
+  <div id="auth-view">
+  <div class="container text-center">
+<section id="section2" class="bg-success bg-lite">
+    <h1>Login</h1>
+    <form id="login-form">
+      <input id="login-username" type="text" required placeholder="Username">
+      <input id="login-password" type="password" required placeholder="Password">
+      <input type="submit" value="Sign in">
+    </form></section>
+    <div id="login-error"></div>
+      <div>
+      <h2>Click<a href="/admin/adminaccount.html"> HERE </a> to Create an Account</h2>
+  </div></div> </div>
+
+
+      <h4> <br> Please use the following credentials to access the basic MyAccount functionality
+          <br>user: admin
+          <br>pass: adminadmin</h4>
+      </section>
+
+  <!-- To-dos View -->
+  <div id="todo-view">
+    <div id="username"></div>
+
+    <h1>To-Do List</h1>
+    <div id="todos"></div>
+    <div id="db-loading">Loading to-dos...</div>
+    <div id="db-error"></div>
+
+    <form id="add-todo-form">
+      <input id="add-todo" type="text" required placeholder="To-Do">
+      <input type="submit" value="Add">
+    </form>
+        <div id="add-todo-error"></div>
+        <input type="button" value="Logout" id="logout-button">
+        <div id="logout-error"></div>
+      </div>
+  <!-- application code -->
+  <script type="text/javascript">
+    userbase.init({ appId: '5b5f2a64-be2a-4ce8-9db0-c8b333065e28' })
+      .then((session) => session.user ? showTodos(session.user) : showAuth())
+      .catch(() => showAuth())
+      .finally(() => document.getElementById('loading-view').style.display = 'none')
+
+    function handleLogin(e) {
+      e.preventDefault()
+
+      const username = document.getElementById('login-username').value
+      const password = document.getElementById('login-password').value
+
+      userbase.signIn({ username, password, rememberMe: 'local' })
+        .then((user) => showTodos(user))
+        .catch((e) => document.getElementById('login-error').innerHTML = e)
+    }
+
+    function handleLogout() {
+      userbase.signOut()
+        .then(() => showAuth())
+        .catch((e) => document.getElementById('logout-error').innerText = e)
+    }
+
+    function showTodos(user) {
+      document.getElementById('auth-view').style.display = 'none'
+      document.getElementById('todo-view').style.display = 'block'
+
+      // reset the todos view
+      document.getElementById('username').innerHTML = user.username
+      document.getElementById('todos').innerText = ''
+      document.getElementById('db-loading').style.display = 'block'
+      document.getElementById('db-error').innerText = ''
+
+      userbase.openDatabase({ databaseName: 'todos', changeHandler })
+        .catch((e) => document.getElementById('db-error').innerText = e)
+    }
+
+    function signout(){
+        userbase.signOut().then(() => {
+      // user logged out
+    }).catch((e) => console.error(e))
+    }
+
+    function showAuth() {
+      document.getElementById('todo-view').style.display = 'none'
+      document.getElementById('auth-view').style.display = 'block'
+      document.getElementById('login-username').value = ''
+      document.getElementById('login-password').value = ''
+      document.getElementById('login-error').innerText = ''
+      document.getElementById('signup-username').value = ''
+      document.getElementById('signup-password').value = ''
+      document.getElementById('signup-error').innerText = ''
+    }
+
+    function changeHandler(items) {
+      document.getElementById('db-loading').style.display = 'none'
+
+      const todosList = document.getElementById('todos')
+
+      if (items.length === 0) {
+        todosList.innerText = 'Empty'
+      } else {
+        // clear the list
+        todosList.innerHTML = ''
+
+        // render all the to-do items
+        for (let i = 0; i < items.length; i++) {
+
+          // build the todo delete button
+          const todoDelete = document.createElement('button')
+          todoDelete.innerHTML = 'X'
+          todoDelete.style.display = 'inline-block'
+          todoDelete.onclick = () => {
+            userbase.deleteItem({ databaseName: 'todos', itemId: items[i].itemId })
+              .catch((e) => document.getElementById('add-todo-error').innerHTML = e)
+          }
+
+          // build the todo checkbox
+          const todoBox = document.createElement('input')
+          todoBox.type = 'checkbox'
+          todoBox.id = items[i].itemId
+          todoBox.checked = items[i].item.complete ? true : false
+          todoBox.onclick = (e) => {
+            e.preventDefault()
+            userbase.updateItem({ databaseName: 'todos', itemId: items[i].itemId, item: {
+              'todo': items[i].item.todo,
+              'complete': !items[i].item.complete
+            }})
+            .catch((e) => document.getElementById('add-todo-error').innerHTML = e)
+          }
+
+          // build the todo label
+          const todoLabel = document.createElement('label')
+          todoLabel.innerHTML = items[i].item.todo
+          todoLabel.style.textDecoration = items[i].item.complete ? 'line-through' : 'none'
+
+          // append the todo item to the list
+          const todoItem = document.createElement('div')
+          todoItem.appendChild(todoDelete)
+          todoItem.appendChild(todoBox)
+          todoItem.appendChild(todoLabel)
+          todosList.appendChild(todoItem)
+        }
+      }
+    }
+
+    function addTodoHandler(e) {
+      e.preventDefault()
+
+      const todo = document.getElementById('add-todo').value
+
+      userbase.insertItem({ databaseName: 'todos', item: { 'todo': todo }})
+        .then(() => document.getElementById('add-todo').value = '')
+        .catch((e) => document.getElementById('add-todo-error').innerHTML = e)
+    }
+
+    document.getElementById('login-form').addEventListener('submit', handleLogin)
+    document.getElementById('signup-form').addEventListener('submit', handleSignUp)
+    document.getElementById('add-todo-form').addEventListener('submit', addTodoHandler)
+    document.getElementById('logout-button').addEventListener('click', handleLogout)
+
+    document.getElementById('todo-view').style.display = 'none'
+    document.getElementById('auth-view').style.display = 'none'
+
+  </script>
+
+    <!-- Footer -->
+    <footer class="gold-bg">
+        <p class="footer">
+            <p>Copyright © 2020 - Developed by Tanner Elphee. All rights reserved. <a href="/aboutme.html"> About Me </a></p>
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom JavaScript for this theme -->
+    <script src="js/scrolling-nav.js"></script>
+    </body>
+</html>
+

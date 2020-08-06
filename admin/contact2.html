@@ -86,42 +86,12 @@ https://userbase.com/docs/quickstart/
     <!-- Contact Google Form -->
     <section class="header2"><h3>Contact Tanner using Google Forms <a target="_blank" href="https://forms.gle/z7pNTEz29qjmpbvN7"> - Here </a></h3>
         </section></section>
-
+      </div>
     <!-- Footer -->
     <footer class="gold-bg">
         <p class="footer">
             <p>Copyright © 2020 - Developed by Tanner Elphee. All rights reserved. <a href="/aboutme.html"> About Me </a></p>
     </footer>
-
-<!-- application code -->
-  <script type="text/javascript">
-    userbase.init({ appId: '5b5f2a64-be2a-4ce8-9db0-c8b333065e28' })
-      .then((session) => session.user ? showTodos(session.user) : showAuth())
-      .catch(() => showAuth())
-      .finally(() => document.getElementById('loading-view').style.display = 'none')
-       function handleSignUp(e) {
-      e.preventDefault()
-      const username = document.getElementById('signup-username').value
-      const password = document.getElementById('signup-password').value
-
-      userbase.signUp({ username, password, rememberMe: 'local' })
-        .then((user) => showTodos(user))
-        .catch((e) => document.getElementById('signup-error').innerHTML = e)
-    }
-       function showAuth() {
-      document.getElementById('todo-view').style.display = 'none'
-      document.getElementById('auth-view').style.display = 'block'
-      document.getElementById('login-username').value = ''
-      document.getElementById('login-password').value = ''
-      document.getElementById('login-error').innerText = ''
-      document.getElementById('signup-username').value = ''
-      document.getElementById('signup-password').value = ''
-      document.getElementById('signup-error').innerText = ''
-    }
-          document.getElementById('signup-form').addEventListener('submit', handleSignUp)
-
-          document.getElementById('auth-view').style.display = 'none'
-  </script>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

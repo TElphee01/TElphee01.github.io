@@ -22,4 +22,7 @@ If you use this code please shoot me an email - telpheemail@aol.com. Cheers!
     margin: 15px;
 }
 
-
+  .aboutimg {
+    height: 200px;
+    background: #aaa;
+  }

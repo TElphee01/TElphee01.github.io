@@ -107,7 +107,7 @@ https://userbase.com/docs/quickstart/
               <input id="add-todo" type="text" required placeholder="To-Do">
               <input type="submit" value="Add">
               <div id="add-todo-error"></div>
-              <input type="button" value="logout" id="logout-button">
+              <input type="click" value="logout" id="logout-button">
               <div id="logout-error"></div>
             </form>
           </div>
@@ -149,11 +149,6 @@ https://userbase.com/docs/quickstart/
               userbase.openDatabase({ databaseName: 'todos', changeHandler })
                 .catch((e) => document.getElementById('db-error').innerText = e)
             }
-
-            function signout
-              userbase.signOut().then(() => {
-                  // user logged out
-              }).catch((e) => console.error(e))
 
             function showAuth() {
               document.getElementById('todo-view').style.display = 'none'

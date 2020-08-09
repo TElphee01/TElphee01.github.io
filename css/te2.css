@@ -127,7 +127,7 @@ https://medium.com/javascript-in-plain-english/using-javascript-to-create-trello
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
     display: grid;
-    grid-template-rows: max-content auto;
+    grid-template-rows: max-content;
     grid-gap: 10px;
     padding: 10px;
     height:800px;

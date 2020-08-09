@@ -71,7 +71,10 @@ https://userbase.com/docs/quickstart/
         <!-- Auth View -->
         <div id="auth-view">
         <div class="container text-center">
-
+        <div><h4>Free UserBase limited to 3 users. Sign in with:
+            <br>user: admin
+            <br>pass: adminadmin</h4>
+        </div>
         <section id="section2" class="bg-success bg-lite">
             <h1>Login</h1>
             <form id="login-form">
@@ -85,12 +88,6 @@ https://userbase.com/docs/quickstart/
               <h2>Click<a href="/admin/adminaccount.html"> HERE </a> to Create an Account</h2>
               </div>
             </div>
-
-        <div>
-            <h4> <br> Please use the following credentials to access the basic MyAccount functionality
-                <br>user: admin
-                <br>pass: adminadmin</h4>
-        </div>
         </div>
         </section>
 <section>
@@ -109,10 +106,10 @@ https://userbase.com/docs/quickstart/
               <div id="add-todo-error"></div>
             </form>
 
-            <button id="handleLogout">
-            <input type="button" value="logout" id="logout-button">
+            <form id="handleLogout">
+            <input type="submit" value="logout" id="logout-button">
             <div id="logout-error"></div>
-            </button>
+            </form>
           </div>
 
           <!-- application code -->
@@ -128,7 +125,7 @@ https://userbase.com/docs/quickstart/
               const username = document.getElementById('login-username').value
               const password = document.getElementById('login-password').value
 
-              userbase.signIn({ username, password, rememberMe: 'local' })
+              userbase.signIn({ username, password, rememberMe: 'none' })
                 .then((user) => showTodos(user))
                 .catch((e) => document.getElementById('login-error').innerHTML = e)
             }

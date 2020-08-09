@@ -130,6 +130,17 @@ https://userbase.com/docs/quickstart/
                 .catch((e) => document.getElementById('login-error').innerHTML = e)
             }
 
+            function handleSignUp(e) {
+              e.preventDefault()
+
+              const username = document.getElementById('signup-username').value
+              const password = document.getElementById('signup-password').value
+
+              userbase.signUp({ username, password, rememberMe: 'none' })
+                .then((user) => showTodos(user))
+                .catch((e) => document.getElementById('signup-error').innerHTML = e)
+            }
+
             function handleLogout() {
               userbase.signOut()
                 .then(() => showAuth())

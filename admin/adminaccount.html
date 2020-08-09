@@ -63,10 +63,21 @@ https://userbase.com/docs/quickstart/
           </ul>
         </div></div></nav> <!-- end Navigation bar components -->
 
-        <!-- Loading View -->
+            <!-- Loading View -->
   <div id="loading-view">Loading...</div>
+
 <header>
-  <div class="container text-center">
+ <section class="section2">
+      <h3> Please use the following credentials to access the basic MyAccount functionality
+          <br>user: admin
+          <br>pass: adminadmin</h3>
+          <br>
+          <h3> Do Not create an account here. The UserBase trial is limited but for this sake of this project, it is enough. Unlimited UserBase functionality is VERY cheap. > $100/yr.
+          <br><h5>Plus I can always put data into an account and only give a few people the correct credentials. For example, credentials for job recruiters with a resume download link. Or credentials for team to have quick access to personal tools and links, like my WebEx personal room. </h5>
+          </h3>
+    </section>
+
+    <div class="container text-center">
       <h1>Create an account</h1>
     <form id="signup-form">
       <input id="signup-username" type="text" required placeholder="Username">
@@ -75,15 +86,6 @@ https://userbase.com/docs/quickstart/
     </form>
     <div id="signup-error"></div>
     </div></header>
-      <section class="section4a">
-      <h2> Please use the following credentials to access the basic MyAccount functionality
-          <br>user: admin
-          <br>pass: adminadmin</h2>
-          <br>
-          <h3> Do Not create an account here. The UserBase trial is limited but for this sake of this project, it is enough. Unlimited UserBase functionality is VERY cheap. > $100/yr.
-          <br><h5>Plus I can always put data into an account and only give a few people the correct credentials. For example, credentials for job recruiters with a resume download link. Or credentials for team to have quick access to personal tools and links, like my WebEx personal room. </h5>
-          </h3>
-    </section>
 
     <!-- Footer -->
     <footer class="gold-bg">
@@ -97,16 +99,18 @@ https://userbase.com/docs/quickstart/
       .then((session) => session.user ? showTodos(session.user) : showAuth())
       .catch(() => showAuth())
       .finally(() => document.getElementById('loading-view').style.display = 'none')
-       function handleSignUp(e) {
+
+      function handleSignUp(e) {
       e.preventDefault()
       const username = document.getElementById('signup-username').value
       const password = document.getElementById('signup-password').value
 
-      userbase.signUp({ username, password, rememberMe: 'local' })
+      userbase.signUp({ username, password, rememberMe: 'none' })
         .then((user) => showTodos(user))
         .catch((e) => document.getElementById('signup-error').innerHTML = e)
     }
-       function showAuth() {
+
+      function showAuth() {
       document.getElementById('todo-view').style.display = 'none'
       document.getElementById('auth-view').style.display = 'block'
       document.getElementById('login-username').value = ''
@@ -116,9 +120,10 @@ https://userbase.com/docs/quickstart/
       document.getElementById('signup-password').value = ''
       document.getElementById('signup-error').innerText = ''
     }
-          document.getElementById('signup-form').addEventListener('submit', handleSignUp)
 
-          document.getElementById('auth-view').style.display = 'none'
+    document.getElementById('signup-form').addEventListener('submit', handleSignUp)
+
+    document.getElementById('auth-view').style.display = 'none'
   </script>
     <!-- Bootstrap core JavaScript -->
     <script src="/vendor/jquery/jquery.min.js"></script>

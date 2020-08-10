@@ -10,7 +10,7 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
   background-image: url(../Images/bg.jpg);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;  
 }
 
 .section1{

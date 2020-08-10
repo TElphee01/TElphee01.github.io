@@ -9,7 +9,7 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
 .bgimg5{
   background-image: url(../Images/bg.jpg);
   background-color: #cccccc; /* Used if the image is unavailable */
-  height: 500px; /* You must set a specified height */
+  height: 900px; /* You must set a specified height */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */

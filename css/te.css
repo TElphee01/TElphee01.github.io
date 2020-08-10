@@ -1,16 +1,15 @@
 /*
-<!-- Primary CSS - TElphee.io
-This code belongs to TElphee.io set of html webpages.
-Fully developed by Tanner Elphee. This website is used as my personal showcase, project sandbox, and platform template.
-Developer assumes no responsibility for use of this website or illicit use of this code.
-If you use this code please shoot me an email - telpheemail@aol.com. Cheers!
+Copyright © 2020 TannerElphee.io - All Rights Reserved.
+This code belongs to TannerElphee.io set of Web development webpages
+TElphee.io has been fully developed and designed by Tanner Elphee. Consider TElphee.io Tanner Elphee's personal showcase, project sandbox, and platform template. All Rights Reserved.
+DISCLAIMER: Developer assumes no responsibility. If you use this code please shoot me an email - telphee@gmail.com.
 -->
 */
 
 .bgimg{
     background-image: url(../Images/bg.jpg);
     background-position: center;
-    background-size: auto;
+    background-repeat: no-repeat;
 }
 
 .section1{
@@ -19,6 +18,9 @@ If you use this code please shoot me an email - telpheemail@aol.com. Cheers!
 
 .section2{
     background-color: lightskyblue;
+}
+.section3{
+    background-color: darkgray;
 }
 
 .profileimg{

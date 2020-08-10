@@ -9,6 +9,7 @@ If you use this code please shoot me an email - telpheemail@aol.com. Cheers!
 
 .bgimg{
     background-image: url(../Images/bg.jpg);
+    position: relative;
 }
 
 .section1{

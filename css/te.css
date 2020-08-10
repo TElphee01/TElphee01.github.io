@@ -8,7 +8,7 @@ If you use this code please shoot me an email - telpheemail@aol.com. Cheers!
 */
 
 .bgimg{
-    background-image: url(../Images/telpheeAvatar.jpg);
+    background-image: url(../Images/bg.jpg);
 }
 
 .section1{
@@ -25,9 +25,14 @@ If you use this code please shoot me an email - telpheemail@aol.com. Cheers!
     float: left;
 }
 
-  .aboutimg {
+.aboutimg {
     height: 200px;
   }
+
+#p1 {
+  font-family: "Times New Roman", Times, serif;
+font-size: 12px;
+}
 
 header {
   position: relative;
@@ -76,4 +81,5 @@ header .overlay {
   header video {
     display: none;
   }
+    
 }

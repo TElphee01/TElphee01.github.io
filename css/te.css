@@ -41,19 +41,6 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
 font-size: 12px;
 }
 
-header {
-  position: relative;
-  background-color: #450084;
-  height: 95vh;
-  min-height: 25rem;
-  width: 100%;
-  overflow: hidden;
-}
-
-header {
-background-image: url('https://mdbootstrap.com/img/Photos/Others/architecture.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;
-}
-
 header video {
   position: absolute;
   top: 50%;

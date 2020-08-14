@@ -7742,6 +7742,7 @@ button.bg-dark:focus {
 .py-4 {
   padding-top: 1.5rem !important;
 position: static;
+    background: black;
 }
 
 .pr-4,

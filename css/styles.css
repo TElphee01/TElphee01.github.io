@@ -7741,7 +7741,7 @@ button.bg-dark:focus {
 .pt-4,
 .py-4 {
   padding-top: 1.5rem !important;
-position:sticky;
+    position:absolute;
 }
 
 .pr-4,

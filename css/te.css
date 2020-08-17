@@ -15,6 +15,16 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
   background-size: cover; /* Resize the background image to cover the entire container */
 }
 
+
+.bgimg5{
+  background-image: url(../Images/mtn5.jpg);
+  background-color: #2c3e50; /* Used if the image is unavailable */
+  height: 900px; /* You must set a specified height */
+  background-position:center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
 .section1{
     background-color: mediumpurple;
 }

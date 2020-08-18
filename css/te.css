@@ -48,7 +48,8 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
 
 #p1 {
   font-family: "Times New Roman", Times, serif;
-font-size: 12px;
+    font-size: 34px;
+    color: black;
 }
 
 header video {

@@ -8758,7 +8758,7 @@ button.bg-dark:focus {
 .mx-md-n4 {
     margin-left: -1.5rem !important;
   }
-
+    
   .m-md-n5 {
     margin: -3rem !important;
   }
@@ -10017,6 +10017,11 @@ h3 {
 }
 .page-section {
   padding: 6rem 0;
+}
+.page-section2 {
+  font-size: 2.25rem;
+  margin: 0 auto;
+
 }
 .page-section .page-section-heading {
   font-size: 2.25rem;

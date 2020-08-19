@@ -10165,6 +10165,9 @@ h3 {
 .masthead .masthead-heading2 {
   font-size: 1.50rem;
   line-height: 1.50rem;
+  font-family: "Times New Roman", Times, serif;
+    color: whitesmoke;
+    background-color: #709952;
 }
 
 .masthead .masthead-subheading {

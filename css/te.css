@@ -59,7 +59,7 @@ header video {
   left: 50%;
   min-width: 100%;
   min-height: 100%;
-  width: auto;
+  width: 620px;
   height: auto;
   z-index: 0;
   -ms-transform: translateX(-50%) translateY(-50%);
@@ -75,7 +75,7 @@ header .container {
 
 header .overlay {
   position: static;
-  top: 10%;
+  top: 0;
   left: 0;
   height: 100%;
   width: 100%;

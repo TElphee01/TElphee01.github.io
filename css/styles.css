@@ -55,7 +55,7 @@ html {
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-  display: block;
+  display:inherit;
 }
 
 body {
@@ -9807,7 +9807,7 @@ button.bg-dark:focus {
 }
 
 .font-weight-light {
-  font-weight: 300 !important;
+  font-weight: 100 !important;
 }
 
 .font-weight-lighter {
@@ -10189,8 +10189,9 @@ background-color: black;
 
 .masthead-heading {
   padding-top: calc(6rem + 74px);
-  font-size: 2.75rem;
-  line-height: 2.75rem;
+  font-size: 1.50rem;
+  line-height: 1.75rem;
+min-height: 650px;
 }
 
 .masthead .masthead-heading3 {

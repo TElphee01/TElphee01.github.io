@@ -7606,6 +7606,13 @@ button.bg-dark:focus {
   margin-bottom: 1rem !important;
 }
 
+.mb-14{
+  margin-bottom: 1rem !important;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 45px;
+    font-variant-caps: normal;
+}
+
 .ml-3,
 .mx-3 {
   margin-left: 1rem !important;

@@ -19,7 +19,7 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
 .bgimg6{
   background-image: url(../Images/mtn7.jpg);
   background-color: #2c3e50; /* Used if the image is unavailable */
-  height: 800px; /* You must set a specified height */
+  height: 950px; /* You must set a specified height */
   background-position:center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
@@ -89,7 +89,7 @@ header .overlay {
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 0.5;
+  opacity: 0.0;
   z-index: 1;
 }
 

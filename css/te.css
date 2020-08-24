@@ -46,7 +46,7 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
     height: 200px;
   }
 
-#p1 {
+.p1 {
   font-family: "Times New Roman", Times, serif;
     font-size: 34px;
     color: white;
@@ -89,7 +89,7 @@ header .overlay {
   height: 100%;
   width: 100%;
   background-color: black;
-  opacity: 0.5; 
+  opacity: 0.0; 
   z-index: 1;
 }
 

@@ -55,7 +55,7 @@ html {
 }
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
-  display:inherit;
+  display: block;
 }
 
 body {
@@ -525,7 +525,7 @@ kbd kbd {
 
 pre {
   display: block;
-  font-size: 87.5%;
+  font-size: 87.5%; 
   color: #212529;
 }
 pre code {
@@ -6123,6 +6123,7 @@ button.bg-primary:focus {
 
 .bg-four {
       background: linear-gradient(to bottom right, #000099 0%, #6600ff 99%);
+    
 } !important;
 }
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -10188,10 +10189,10 @@ background-color: black;
 }
 
 .masthead-heading {
-  padding-top: calc(6rem + 74px);
+  padding-top: calc(6rem + 74px);    
   font-size: 1.50rem;
   line-height: 1.75rem;
-min-height: 650px;
+  padding-bottom: 6rem;
 }
 
 .masthead .masthead-heading3 {
@@ -10199,7 +10200,7 @@ min-height: 650px;
   line-height: 1.50rem;
 }
 
-.masthead .masthead-heading2 {
+.masthead-heading2 {
   font-size: 1.50rem;
   line-height: 1.50rem;
   font-family: "Times New Roman", Times, serif;

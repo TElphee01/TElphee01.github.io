@@ -10194,7 +10194,7 @@ background-color: black;
   padding-top: calc(6rem + 74px);
   font-size: 1.50rem;
   line-height: 1.75rem;
-min-height: 650px;
+    min-height: 650px;
 }
 
 .masthead .masthead-heading3 {

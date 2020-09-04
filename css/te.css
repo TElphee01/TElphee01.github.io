@@ -98,6 +98,6 @@ header .overlay {
     background: url('../Images/bg4.jpg') black no-repeat center center scroll;
   }
   header video {
-    display: block;
+    display:inline-block;
   }
 }

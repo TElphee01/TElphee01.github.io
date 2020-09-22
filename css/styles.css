@@ -7594,6 +7594,11 @@ button.bg-dark:focus {
   margin: 1rem !important;
 }
 
+.m-31 {
+  margin: 1rem !important;
+    display: block;
+}
+
 .mt-3,
 .my-3 {
   margin-top: 1rem !important;

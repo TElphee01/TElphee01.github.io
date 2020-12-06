@@ -95,7 +95,7 @@ header .overlay {
 
 @media (pointer: coarse) and (hover: none) {
   header {
-    background: url('../Images/bg4.jpg') black no-repeat center center scroll;
+    background: url('') black no-repeat center center scroll;
   }
   header video {
     display:inline-block;

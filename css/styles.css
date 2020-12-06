@@ -73,6 +73,30 @@ body {
   outline: 0 !important;
 }
 
+.video-container {
+
+position:absolute;
+top: 0%;
+left: 0%; /*centers the video */
+height: 100%;
+width: 100%;
+overflow: hidden;
+
+}
+
+
+
+video {
+margin-top:50px; /* gap b/w navbar and header */
+position:absolute;
+z-index: -1;
+opacity: 0.78;
+width: 100%;
+margin: none;
+padding: none;
+}
+
+
 hr {
   box-sizing: content-box;
   height: 0;

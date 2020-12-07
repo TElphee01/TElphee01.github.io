@@ -16,6 +16,8 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
+        <script src="/js/pdfobject.js"></script>
+        <script>PDFObject.embed("/assets/TannerElpheeResume.pdf", "#example1");</script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
@@ -281,8 +283,10 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
                                         <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
+                                    </div>
                                     <!-- Portfolio Modal - Text-->
-                                    <div class="mb-5 justify-content-center align-center">My resume is available in .docx and .pdf format. This web viewer is sized for mobile inside this pop-out window which is why it may feel small. Use the zoom feature if needed.
+                                    <div class="mb-5 justify-content-center align-center">
+                                        My resume is available in .docx and .pdf format. This web viewer is sized for mobile inside this pop-out window which is why it may feel small. Use the zoom feature if needed.
 
                                     <!-- Resume Download Button-->
                                     <div class="text-center mt-4">
@@ -291,9 +295,7 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
                                             Download TannerElpheeResume.docx
                                         </a>
                                     </div>
-                                    <div class="container-fluid d-flex justify-content-left m-31">
-                                        <iframe src ="./assets/TannerElpheeResume.pdf" width="400" height="750" allowfullscreen webkitallowfullscreen></iframe>
-                                    </div>    
+                                        <div id="example1"></div>  
                                     </div>
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
@@ -356,7 +358,7 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
                                  <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/skills.jpg" alt="Tanner Elphee Skills" />
+                                    <img class="img-fluid rounded mb-5" src="assets/img/skills.jpg" alt="Tanner Elphee Skills"/>
    
                                             <div class="container">
                                                 <h1>Tanner Elphee</h1>

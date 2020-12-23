@@ -16,8 +16,6 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-        <script src="/js/pdfobject.js"></script>
-        <script>PDFObject.embed("/assets/TannerElpheeResume.pdf", "#example1");</script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
@@ -64,9 +62,11 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
                 <!-- About Me text -->
                 <div class="align-items-center">
                 <!--Grid row-->
-                    <p class="p-2 mb-2 masthead-heading2 font-weight-bold"> Technology professionals, like automotive specialists, use expertise and tools to solve problems and satisfy clients. I think of myself as someone who can bridge the gap between service and technology in any industry. Working with Virginia’s premier Hyundai dealership while studying Computer Information Systems at James Madison University demonstrates my ability to work hard, achieve goals, and bridge the gap by embracing technological solutions.
-                    </p>
+                    <div class="container">
+                        <p class="p-2 mb-2 masthead-heading2 font-weight-bold"> Technology professionals, like automotive specialists, use expertise and tools to solve problems and satisfy clients. I think of myself as someone who can bridge the gap between service and technology in any industry. Working with Virginia’s premier Hyundai dealership while studying Computer Information Systems at James Madison University demonstrates my ability to work hard, achieve goals, and bridge the gap by embracing technological solutions.
+                        </p>
                     </div>
+                </div>
             </div>
         </header>
         <!-- Portfolio Section-->
@@ -172,11 +172,11 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
                     <!-- Footer Location-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <p class="lead mb-0">
-                Tanner Elphee - Student
-                <br> Computer Information Systems 
-                <br> James Madison University - Dec 2020
-                <br> 540-294-2348
-                <br> elpheeti@dukes.jmu.edu
+                            Tanner Elphee - Student
+                            <br> Computer Information Systems 
+                            <br> James Madison University - Dec 2020
+                            <br> 540-294-2348
+                            <br> elpheeti@dukes.jmu.edu
                         </p>
                     </div>
                     <!-- Footer Social Icons-->
@@ -242,7 +242,7 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
                                         For my CIS Capstone project during the Fall 2020, four other teammates and I worked as a virtual agile team to develop a web platform for JMU professors to host <b>CyberDay!</b> - A fun filled day on campus for middle school students to learn more about technology. 
                                     <br> To meet our needs we used C#, ASP.Net, JavaScript, and Sql Server to develop a fluent platform, securely create various accounts, send emails, communicate with parents, and much more. Once finished our website was hosted on AWS Elastic Beanstalk. 
                                     </p>
-                                      <img src="./Images/jmuwix.jpg" alt="JMU Wix" class="img-fluid">                                  
+                                      <img src="./Images/CyberDay.png" alt="Capstone Project" class="img-fluid">                                  
                                     <!-- Icon Divider-->
                                     <div class="divider-custom">
                                         <div class="divider-custom-line"></div>
@@ -297,19 +297,15 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
                                     </div>
                                     <!-- Portfolio Modal - Text-->
                                     <div class="mb-5 justify-content-center align-center">
-                                        Resume available for Download.
+                                        Resume available for download.
 
                                     <!-- Resume Download Button-->
-                                    <div class="text-center mt-4">
+                                    <div class="text-center mt-4 p-2">
                                         <a class="btn btn-xl btn-outline-dark" href="./assets/TannerElpheeResume.docx">
                                             <i class="fas fa-download mr-2"></i>
                                             Download TannerElpheeResume.docx
                                         </a>
-                                    </div>
-                                    <div class="container-fluid d-flex justify-content-left m-31">
-                                        <iframe src ="./assets/TannerElpheeResume.pdf" width="400" height="600" allowfullscreen webkitallowfullscreen></iframe>
-                                    </div>    
-                                    </div>
+                                    </div>  
                                     <button class="btn btn-primary" data-dismiss="modal">
                                         <i class="fas fa-times fa-fw"></i>
                                         Close Window
@@ -516,11 +512,10 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
                                         <div id="add-todo-error"></div>
                                      </div>
                                 </div>  
-                                    <button class="btn btn-primary m-3" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
+                                <button class="btn btn-primary m-3" data-dismiss="modal">
+                                    <i class="fas fa-times fa-fw"></i>
                                         Close Window
-                                    </button>
-          
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -565,136 +560,6 @@ DISCLAIMER: Developer assumes no responsibility. If you use this code please sho
                 </div>
             </div>
         </div>
-        <!--Userbase Script application code -->
-        <script type="text/javascript">
-            userbase.init({ appId: '5b5f2a64-be2a-4ce8-9db0-c8b333065e28' })
-              .then((session) => session.user ? showTodos(session.user) : showAuth())
-              .catch(() => showAuth())
-              .finally(() => document.getElementById('loading-view').style.display = 'none')
-
-            function handleLogin(e) {
-              e.preventDefault()
-
-              const username = document.getElementById('login-username').value
-              const password = document.getElementById('login-password').value
-
-              userbase.signIn({ username, password, rememberMe: 'local' })
-                .then((user) => showTodos(user))
-                .catch((e) => document.getElementById('login-error').innerHTML = e)
-            }
-
-            function handleSignUp(e) {
-              e.preventDefault()
-
-              const username = document.getElementById('signup-username').value
-              const password = document.getElementById('signup-password').value
-
-              userbase.signUp({ username, password, rememberMe: 'local' })
-                .then((user) => showTodos(user))
-                .catch((e) => document.getElementById('signup-error').innerHTML = e)
-            }
-
-            function handleLogout() {
-              userbase.signOut()
-                .then(() => showAuth())
-                .catch((e) => document.getElementById('logout-error').innerText = e)
-            }
-
-            function showTodos(user) {
-              document.getElementById('auth-view').style.display = 'none'
-              document.getElementById('todo-view').style.display = 'block'
-
-              // reset the todos view
-              document.getElementById('username').innerHTML = user.username
-              document.getElementById('todos').innerText = ''
-              document.getElementById('db-loading').style.display = 'block'
-              document.getElementById('db-error').innerText = ''
-
-              userbase.openDatabase({ databaseName: 'todos', changeHandler })
-                .catch((e) => document.getElementById('db-error').innerText = e)
-            }
-
-            function showAuth() {
-              document.getElementById('todo-view').style.display = 'none'
-              document.getElementById('auth-view').style.display = 'block'
-              document.getElementById('login-username').value = ''
-              document.getElementById('login-password').value = ''
-              document.getElementById('login-error').innerText = ''
-              document.getElementById('signup-username').value = ''
-              document.getElementById('signup-password').value = ''
-              document.getElementById('signup-error').innerText = ''
-            }
-
-            function changeHandler(items) {
-              document.getElementById('db-loading').style.display = 'none'
-
-              const todosList = document.getElementById('todos')
-
-              if (items.length === 0) {
-                todosList.innerText = 'Empty'
-              } else {
-                // clear the list
-                todosList.innerHTML = ''
-
-                // render all the to-do items
-                for (let i = 0; i < items.length; i++) {
-
-                  // build the todo delete button
-                  const todoDelete = document.createElement('button')
-                  todoDelete.innerHTML = 'X'
-                  todoDelete.style.display = 'inline-block'
-                  todoDelete.onclick = () => {
-                    userbase.deleteItem({ databaseName: 'todos', itemId: items[i].itemId })
-                      .catch((e) => document.getElementById('add-todo-error').innerHTML = e)
-                  }
-
-                  // build the todo checkbox
-                  const todoBox = document.createElement('input')
-                  todoBox.type = 'checkbox'
-                  todoBox.id = items[i].itemId
-                  todoBox.checked = items[i].item.complete ? true : false
-                  todoBox.onclick = (e) => {
-                    e.preventDefault()
-                    userbase.updateItem({ databaseName: 'todos', itemId: items[i].itemId, item: {
-                      'todo': items[i].item.todo,
-                      'complete': !items[i].item.complete
-                    }})
-                    .catch((e) => document.getElementById('add-todo-error').innerHTML = e)
-                  }
-
-                  // build the todo label
-                  const todoLabel = document.createElement('label')
-                  todoLabel.innerHTML = items[i].item.todo
-                  todoLabel.style.textDecoration = items[i].item.complete ? 'line-through' : 'none'
-
-                  // append the todo item to the list
-                  const todoItem = document.createElement('div')
-                  todoItem.appendChild(todoDelete)
-                  todoItem.appendChild(todoBox)
-                  todoItem.appendChild(todoLabel)
-                  todosList.appendChild(todoItem)
-                }
-              }
-            }
-
-            function addTodoHandler(e) {
-              e.preventDefault()
-
-              const todo = document.getElementById('add-todo').value
-
-              userbase.insertItem({ databaseName: 'todos', item: { 'todo': todo }})
-                .then(() => document.getElementById('add-todo').value = '')
-                .catch((e) => document.getElementById('add-todo-error').innerHTML = e)
-            }
-
-            document.getElementById('login-form').addEventListener('submit', handleLogin)
-            document.getElementById('signup-form').addEventListener('submit', handleSignUp)
-            document.getElementById('add-todo-form').addEventListener('submit', addTodoHandler)
-            document.getElementById('logout-button').addEventListener('click', handleLogout)
-
-            document.getElementById('todo-view').style.display = 'none'
-            document.getElementById('auth-view').style.display = 'none'
-  </script>        
         
         <!-- Bootstrap core JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

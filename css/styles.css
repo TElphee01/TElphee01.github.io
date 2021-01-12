@@ -7600,6 +7600,10 @@ button.bg-dark:focus {
   margin-bottom: 0.5rem !important;
 }
 
+.mb-31 {
+    margin-bottom: .7rem
+}
+
 .ml-2,
 .mx-2 {
   margin-left: 0.5rem !important;
@@ -10218,7 +10222,7 @@ background-color: black;
   padding-top: calc(6rem + 74px);
   font-size: 1.50rem;
   line-height: 1.75rem;
-    min-height: 650px;
+    min-height: inherit;
 }
 
 .masthead .masthead-heading3 {
